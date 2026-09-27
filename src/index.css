@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    @apply min-h-screen m-0 p-0 text-stone-700 bg-pastel-cream overflow-x-hidden;
+    background: radial-gradient(circle at 10% 20%, rgba(255, 222, 233, 0.45) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(233, 213, 255, 0.45) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(254, 215, 170, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(186, 230, 253, 0.35) 0%, transparent 40%),
+                #FFFDF9;
+    background-attachment: fixed;
+  }
+  
+  /* Custom romantic scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 240, 243, 0.6);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(246, 135, 179, 0.5);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(236, 72, 153, 0.7);
+  }
+}
+
+@layer utilities {
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+  .font-romantic {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  /* Glassmorphism Card Style */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 15px 35px -10px rgba(244, 114, 182, 0.12),
+                0 0 1px 1px rgba(255, 255, 255, 0.9);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .glass-card-hover:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 25px 45px -12px rgba(236, 72, 153, 0.2),
+                0 0 1px 1.5px rgba(255, 255, 255, 0.95);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+  }
+
+  /* Pastel Text Gradient */
+  .text-pastel-gradient {
+    background: linear-gradient(135deg, #EC4899 0%, #D946EF 50%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-rose-gradient {
+    background: linear-gradient(135deg, #F43F5E 0%, #FB7185 50%, #FDA4AF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
